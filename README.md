@@ -1,8 +1,9 @@
 # strona-ai-skills
 
 Zestaw skilli Claude Code do **rozbudowy i utrzymania strony zbudowanej w kursie "Stwórz stronę z AI"**
-(Next.js + Vercel). Dzięki nim możesz przez Claude Code dodawać nowe podstrony w spójnym designie,
-zbudować stronę oferty swoich usług i sprawdzić stronę przed publikacją - bez znajomości całego kodu.
+(Next.js + Vercel) plus pomoc w **ułożeniu samej oferty**. Dzięki nim możesz przez Claude Code
+zaprojektować ofertę swoich usług, dodawać nowe podstrony w spójnym designie i sprawdzić stronę
+przed publikacją - bez znajomości całego kodu.
 
 Skille są **ogólne**: działają na dowolnej stronie zrobionej w standardzie kursu (App Router, design
 tokens w `app/globals.css`, komponenty nawigacji i stopki, formularz kontaktowy przez Resend).
@@ -13,7 +14,7 @@ uzupełniasz pod siebie.
 
 | Skill | Do czego | Jak wywołać |
 |---|---|---|
-| `oferta` | strona oferty Twoich usług (pakiety, korzyści, CTA) w designie Twojej strony | `/oferta` lub „zrób stronę oferty" |
+| `zaprojektuj-oferte` | układa Twoją ofertę od zera, gdy nie wiesz jak opisać usługę (kto, problem, efekt, pakiety, cena, gwarancja) → `OFERTA.md` | `/zaprojektuj-oferte` lub „pomóż mi ułożyć ofertę" |
 | `nowa-podstrona` | nowa podstrona / landing w istniejącym design systemie (nawigacja, stopka, SEO) | `/nowa-podstrona` lub „stwórz nową podstronę" |
 | `seo-audyt` | audyt SEO przed publikacją (metadane, H1, sitemap, OG, JSON-LD) | `/seo-audyt` lub „sprawdź seo" |
 | `bezpieczenstwo` | audyt bezpieczeństwa (sekrety, formularze, nagłówki, zależności) | `/bezpieczenstwo` lub „czy strona jest bezpieczna" |
@@ -37,7 +38,7 @@ git clone <URL-tego-repo> ~/strona-ai-skills
 # 2. w folderze repo STRONY podlinkuj skille
 cd /sciezka/do/twojej-strony
 mkdir -p .claude/skills
-ln -s ~/strona-ai-skills/skills/oferta          .claude/skills/oferta
+ln -s ~/strona-ai-skills/skills/zaprojektuj-oferte .claude/skills/zaprojektuj-oferte
 ln -s ~/strona-ai-skills/skills/nowa-podstrona  .claude/skills/nowa-podstrona
 ln -s ~/strona-ai-skills/skills/seo-audyt       .claude/skills/seo-audyt
 ln -s ~/strona-ai-skills/skills/bezpieczenstwo  .claude/skills/bezpieczenstwo
@@ -62,7 +63,7 @@ cp -R ~/strona-ai-skills/references    .claude/
    na faktach Twojej strony zamiast zgadywać.
 2. Otwórz terminal **w głównym folderze repo strony** (tam, gdzie `package.json`).
 3. Zainstaluj zależności i ustaw `.env.local` (`RESEND_API_KEY`, `KONTAKT_EMAIL`).
-4. Uruchom Claude Code i wpisz np. `/oferta` albo `/nowa-podstrona`.
+4. Uruchom Claude Code i wpisz np. `/zaprojektuj-oferte` albo `/nowa-podstrona`.
 
 Każdy skill najpierw czyta `PROJEKT.md` i realny kod, więc działa na aktualnym stanie strony.
 
