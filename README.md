@@ -15,9 +15,14 @@ uzupełniasz pod siebie.
 | Skill | Do czego | Jak wywołać |
 |---|---|---|
 | `zaprojektuj-oferte` | układa Twoją ofertę od zera, gdy nie wiesz jak opisać usługę (kto, problem, efekt, pakiety, cena, gwarancja) → `OFERTA.md` | `/zaprojektuj-oferte` lub „pomóż mi ułożyć ofertę" |
+| `strona-oferty` | buduje STRONĘ oferty (podstronę `/oferta`) z gotowej treści, w Twoim designie | `/strona-oferty` lub „zrób stronę oferty" |
 | `nowa-podstrona` | nowa podstrona / landing w istniejącym design systemie (nawigacja, stopka, SEO) | `/nowa-podstrona` lub „stwórz nową podstronę" |
 | `seo-audyt` | audyt SEO przed publikacją (metadane, H1, sitemap, OG, JSON-LD) | `/seo-audyt` lub „sprawdź seo" |
 | `bezpieczenstwo` | audyt bezpieczeństwa (sekrety, formularze, nagłówki, zależności) | `/bezpieczenstwo` lub „czy strona jest bezpieczna" |
+
+> **Oferta w dwóch krokach:** najpierw `zaprojektuj-oferte` układa samą ofertę (treść, pakiety, cena,
+> gwarancja) i zapisuje `OFERTA.md`. Potem `strona-oferty` bierze tę treść i buduje z niej podstronę
+> `/oferta`. Możesz użyć każdego osobno, ale razem działają najlepiej.
 
 - **`PROJEKT.md`** - źródło prawdy o Twojej stronie (design system, ścieżki, źródła danych, env).
   Uzupełnij go raz pod swoją stronę. Każdy skill czyta go na starcie. Gdy coś w stronie się zmieni -
@@ -39,6 +44,7 @@ git clone <URL-tego-repo> ~/strona-ai-skills
 cd /sciezka/do/twojej-strony
 mkdir -p .claude/skills
 ln -s ~/strona-ai-skills/skills/zaprojektuj-oferte .claude/skills/zaprojektuj-oferte
+ln -s ~/strona-ai-skills/skills/strona-oferty   .claude/skills/strona-oferty
 ln -s ~/strona-ai-skills/skills/nowa-podstrona  .claude/skills/nowa-podstrona
 ln -s ~/strona-ai-skills/skills/seo-audyt       .claude/skills/seo-audyt
 ln -s ~/strona-ai-skills/skills/bezpieczenstwo  .claude/skills/bezpieczenstwo
